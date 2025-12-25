@@ -1,75 +1,22 @@
-# 📊 Price Optimization ML App (Flask + XGBoost)
+# 📊 Price Optimization ML System – Machine Learning Application
 
-A minimal machine learning web app built with **Flask**, **XGBoost**, and **Pandas**, designed to recommend the optimal product price to maximize profit based on historical data and business constraints.
-
----
-
-## ✅ Features
-
-- 🧠 Predicts optimal price for a product using ML
-- 💰 Takes into account cost price, competitor price & past sales
-- 📊 Real-time input with API or UI form
-- 🔄 Constrained optimization for realistic pricing
-- 🧪 Includes a trained XGBoost regression model
+A **machine learning–driven pricing optimization system** built using **Flask, XGBoost, and Pandas** to recommend **profit-maximizing product prices** based on historical sales data, competitor pricing, and business constraints.
 
 ---
 
-## ⚙️ Setup Instructions
+## ✅ Key Features
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/price-optimizer
-cd price-optimizer
+- Predicts **optimal product pricing** using supervised machine learning  
+- Incorporates **cost price, competitor price, and historical demand patterns**  
+- Uses a trained **XGBoost regression model** for demand prediction  
+- Applies **constrained optimization** to ensure realistic pricing recommendations  
+- Provides both **API-based and UI-based interaction** for price simulation  
 
-# 2. Create a virtual environment
-python -m venv env
+---
 
-# 3. Activate it
-# On Windows:
-.\env\Scripts\activate
-# On macOS/Linux:
-source env/bin/activate
+## 🧠 Model & Optimization Logic
 
-# 4. Install dependencies
-pip install -r requirements.txt
+- **Model:** XGBoost Regressor  
+- **Prediction Target:** Quantity sold  
 
-# 5. Run the app
-python app.py
-🧠 Model Details
-Model: XGBoost Regressor
-
-Target: Predict quantity sold
-
-Objective: Maximize profit
-Profit = (Price - Cost) × Predicted Quantity
-
-Features used:
-
-UnitPrice
-
-CompetitorPrice
-
-PrevMonthQuantity
-
-PrevMonthPrice
-
-AvgQuantity, QuantityStd
-
-AvgPrice, PriceStd
-
-IsWeekend
-
-TotalQuantity
-
-🧰 Tech Stack
-[Flask] - Backend web server
-
-[Pandas] - Data handling
-
-[XGBoost] - Machine learning model
-
-[HTML + Jinja2] - Frontend templates
-
-🏁 Result
-Interactive UI + API to simulate business pricing scenarios and generate data-driven pricing strategies.
-
+### Profit Objective
